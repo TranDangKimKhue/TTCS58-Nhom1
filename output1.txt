@@ -1,0 +1,3 @@
+Sau khi da bo cac khoang trang thua : hello world 
+Sau khi chuan hoa chuoi dang Proper : Hello World 
+So luong ki tu cac chu cai trong chuoi : 10
