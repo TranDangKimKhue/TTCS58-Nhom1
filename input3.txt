@@ -1,0 +1,12 @@
+Ma nhan vien : 1
+Ho lot : nguyen van
+Ten : c
+Tien luong : 5000
+Ma nhan vien : 2
+Ho lot : tran van
+Ten : a
+Tien luong : 12000
+Ma nhan vien : 3
+Ho lot : le van
+Ten : b
+Tien luong : 8000
