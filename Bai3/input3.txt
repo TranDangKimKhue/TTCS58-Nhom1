@@ -1,0 +1,4 @@
+3
+1	Nguyen	Kien	5000	
+2	Tran	An	12000	
+3	Le	Tu	8000	
