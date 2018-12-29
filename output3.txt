@@ -1,0 +1,13 @@
+Thong tin nhan vien da duoc tim kiem : 2
+STT	MaNV	Ho lot		Ten		Tien Luong
+2	TranVan		A		1200
+Danh sach nhan vien co tien luong lon nhat va thap nhat : 
+STT	MaNV	Ho lot		Ten		Tien Luong Lon Nhat
+ 3	 3	LeVan	B		8000
+STT	MaNV	Ho lot		Ten		Tien Luong Nho Nhat
+ 2	 2	TranVan	A		1200
+Sau khi da sap xep : 
+STT	MaNV	Ho lot		Ten		Tien Luong
+2	TranVan		A		1200
+3	LeVan		B		8000
+1	NguyenVan		C		5000
