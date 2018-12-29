@@ -1,0 +1,4 @@
+3
+1	NguyenVan	C	5000	
+2	TranVan	A	1200	
+3	LeVan	B	8000	
