@@ -1,9 +1,0 @@
-2Ma nhan vien : 2
-Ho lot : tran van
-Ten : a
-Tien luong : 12000
-MAX : 12000	2	tran van	a
-MIN : 5000	1	nguyen van	c
-2	tran van	a	12000
-3	le van	b	8000
-1	nguyen van	c	5000
