@@ -1,0 +1,31 @@
+Sau khi them mot nhan vien vao danh sach : 
+---------------------------------------------
+STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
+1	 Khue		    21	5000
+2	 Tuyen		    22	12000
+3	 To		    2	1200
+7	 Luan		    24	8000
+4	 An		    25	8000
+---------------------------------------------
+STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
+Danh sach sau khi cap nhat : 
+1	 Khue		    21	5000
+2	 Tuyen		    22	12000
+3	 To		    2	1200
+7	 Tien		    22	6000
+4	 An		    25	8000
+Sau khi xoa mot nhan vien vao danh sach : 
+---------------------------------------------
+STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
+1	 Khue		    21	5000
+2	 Tuyen		    22	12000
+3	 To		    2	1200
+4	 An		    25	8000
+---------------------------------------------
+STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
+Ket qua sau khi tim kiem : 
+1	Khue	21	5000
+---------------------------------------------
+STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
+Ket qua sau khi tim kiem : 
+4	An	25	8000
