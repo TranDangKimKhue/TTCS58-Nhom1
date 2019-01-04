@@ -15,6 +15,8 @@ void xoaNv(nhanVien a[],int &n);
 void capNhatNv(nhanVien a[],int n);
 void timKiemNv(nhanVien a[],int n);
 void ghifile(char *file,nhanVien a[],int n);
+void ghiFileNhiPhan(char *file,nhanVien a[],int n);
+void docFileNhiPhan(char *file,nhanVien a[],int n);
 void nhap(nhanVien a[],int &n)
 {
 	for(int i=0;i<n;i++)
@@ -154,13 +156,22 @@ void ghifile(char *file,nhanVien a[],int n)
 		f<<a[i].maNv<<endl<<a[i].hoTen<<endl<<a[i].tuoi<<endl<<a[i].luongCb<<endl;
 	f.close();
 }
-/*void filenhiphan(char *file,nhanVien a[])
+void ghiFileNhiPhan(char *file,nhanVien a[],int n)
 {
-	ofstream f;
-	f.open(file,ios::binary);
-	f.write((char *)a,sizeof(a));
-	f.close();
-}*/
+	FILE *f;
+	f=fopen(file,"wb");
+	fwrite(&a,sizeof(nhanVien),1,f);
+	fclose(f);
+}
+void docFileNhiPhan(char *file,nhanVien a[],int n)
+{
+	FILE *g;
+	g=fopen(file,"rb");
+	fread(&a,sizeof(nhanVien),1,g);
+	for(int i=0;i<n;i++)
+		cout<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
+	fclose(g);
+}
 int main()
 {
 	nhanVien a[50];
