@@ -15,7 +15,6 @@ void xoaNv(nhanVien a[],int &n);
 void capNhatNv(nhanVien a[],int n);
 void timKiemNv(nhanVien a[],int n);
 void ghifile(char *file,nhanVien a[],int n);
-void ghifile1(char *file,nhanVien a[],int n,char *s);
 void nhap(nhanVien a[],int &n)
 {
 	for(int i=0;i<n;i++)
