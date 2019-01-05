@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 #include<fstream>
+#include<stdlib.h>
+#include<string.h>
 struct nhanVien
 {
 	int maNv;
@@ -180,18 +182,19 @@ int main()
 	g.open("input2.txt");
 	if(g!=NULL)
 	{
-		g>>n;
+		char s[30];
+		g.getline(s,30);	n=atoi(s);
 		cout<<"Du lieu trong file : "<<endl;
 		cout<<"So luong nhan vien : "<<n<<endl;
 		cout<<"---------------------------------------------"<<endl;
-		cout<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
+		cout<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"\t|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 		for(int i=0;i<n;i++)
 		{
-			g>>a[i].maNv;
-			g>>a[i].hoTen;
-			g>>a[i].tuoi;
-			g>>a[i].luongCb;
-			cout<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
+			g.getline(s,30);	a[i].maNv=atoi(s);
+			g.getline(s,30);	strcpy(a[i].hoTen,s);
+			g.getline(s,30);	a[i].tuoi=atoi(s);
+			g.getline(s,30);	a[i].luongCb=atoi(s);
+			cout<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t"<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
 		}
 		system("pause");
 		do
@@ -215,7 +218,6 @@ int main()
 					cin>>n;
 					nhap(a,n);
 					ghifile("input2.txt",a,n);
-					//filenhiphan("input2.dat",a);
 					system("pause");
 					break;
 				case 2:
