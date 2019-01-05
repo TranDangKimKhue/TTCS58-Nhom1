@@ -1,39 +1,39 @@
 Sau khi them mot nhan vien vao danh sach : 
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
-1	 Tran Dang Kim Khue		    22	12000
-2	 Tran Ngoc Tien		    23	6500
-3	 Le Chi Van		    22	3500
-4	 Nguyen Huu Luan		    20	5500
-5	 Nguyen Cong Luan		    25	6500
+1	1	 Tran Dang Kim Khue		    22	12000
+2	2	 Tran Ngoc Tien		    23	6500
+3	3	 Le Chi Van		    22	3500
+4	4	 Nguyen Huu Luan		    20	5500
+5	5	 Nguyen Cong TO		    27	6500
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
 Danh sach sau khi cap nhat : 
-1	 Tran Dang Kim Khue		    22	12000
-2	 Tran Ngoc Tien		    23	6500
-3	 Le Chi Van		    22	3500
-4	 Nguyen Huu Luan		    20	5500
-5	 Nguyen Truong Thang		    25	6500
+1	1	 Tran Dang Kim Khue		    22	12000
+2	2	 Tran Ngoc Tien		    23	6500
+3	3	 Le Chi Van		    22	3500
+4	4	 Nguyen Huu Luan		    20	5500
+5	5	 Nguyen Canh To		    25	6500
 Sau khi xoa mot nhan vien vao danh sach : 
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
-1	 Tran Dang Kim Khue		    22	12000
-2	 Tran Ngoc Tien		    23	6500
-3	 Le Chi Van		    22	3500
-4	 Nguyen Huu Luan		    20	5500
+1	1	 Tran Dang Kim Khue		    22	12000
+2	2	 Tran Ngoc Tien		    23	6500
+3	3	 Le Chi Van		    22	3500
+4	4	 Nguyen Huu Luan		    20	5500
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
 Ket qua sau khi tim kiem : 
-1	Tran Dang Kim Khue	22	12000
+Vi tri : 01	Tran Dang Kim Khue	22	12000
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
 Ket qua sau khi tim kiem : 
-2	Tran Ngoc Tien	23	6500
+Vi tri : 12	Tran Ngoc Tien	23	6500
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
 Ket qua sau khi tim kiem : 
-3	Le Chi Van	22	3500
+Vi tri : 23	Le Chi Van	22	3500
 ---------------------------------------------
 STT|Ma nhan vien|Ho ten nhan vien|Tuoi|Luong
 Ket qua sau khi tim kiem : 
-4	Nguyen Huu Luan	20	5500
+Vi tri : 34	Nguyen Huu Luan	20	5500
