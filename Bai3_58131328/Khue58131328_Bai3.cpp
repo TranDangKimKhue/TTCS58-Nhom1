@@ -1,8 +1,7 @@
-#include<stdio.h>
-#include<conio.h>
 #include<iostream>
 #include<fstream>
 #include<string.h>
+#include<stdlib.h>
 using namespace std;
 ofstream g ("output3.txt");
 struct nhanvien
@@ -26,30 +25,31 @@ void nhap(nhanvien a[],int n)
 	f<<n<<endl;
 	for(int i=0;i<n;i++)
 	{
-		f<<a[i].manv<<"\t";
-		f<<a[i].holot<<"\t";
-		f<<a[i].ten<<"\t";
-		f<<a[i].tienluong<<"\t"<<endl;
+		f<<a[i].manv<<endl;
+		f<<a[i].holot<<endl;
+		f<<a[i].ten<<endl;
+		f<<a[i].tienluong<<endl;
 	}
 	f.close();
 }
 void timkiemmanv(nhanvien a[],int n)
 {
-	int x;
+	int x,index;
 	cout<<"Nhap ma nhan vien can tim : ";	cin>>x;
-	cout<<"Thong tin nhan vien da duoc tim kiem : "<<x<<endl;
-	g<<"Thong tin nhan vien da duoc tim kiem : "<<x<<endl;
-	cout<<"STT"<<"\t"<<"MaNV"<<"\t"<<"Ho lot"<<"\t\t"<<"Ten"<<"\t\t"<<"Tien Luong"<<endl;
-	g<<"STT"<<"\t"<<"MaNV"<<"\t"<<"Ho lot"<<"\t\t"<<"Ten"<<"\t\t"<<"Tien Luong"<<endl;
 	for(int i=0;i<n;i++)
-	{
 		if(x==a[i].manv)
-		{
-			cout<<" "<<i+1<<"\t"<<" "<<a[i].manv<<"\t"<<" "<<a[i].holot<<"\t"<<" "<<a[i].ten<<"\t"<<" "<<a[i].tienluong<<endl;
-			g<<a[i].manv<<"\t"<<a[i].holot<<"\t\t"<<a[i].ten<<"\t\t"<<a[i].tienluong<<endl;
-		}
-		
+			index=i;
+	if(a[index].manv==x)
+	{
+		cout<<"Thong tin nhan vien da duoc tim kiem : "<<x<<endl;
+		g<<"Thong tin nhan vien da duoc tim kiem : "<<x<<endl;
+		cout<<"STT"<<"\t"<<"MaNV"<<"\t"<<"Ho lot"<<"\t\t"<<"Ten"<<"\t\t"<<"Tien Luong"<<endl;
+		g<<"STT"<<"\t"<<"MaNV"<<"\t"<<"Ho lot"<<"\t\t"<<"Ten"<<"\t\t"<<"Tien Luong"<<endl;
+		cout<<" "<<index+1<<"\t"<<" "<<a[index].manv<<"\t"<<" "<<a[index].holot<<"\t"<<" "<<a[index].ten<<"\t"<<" "<<a[index].tienluong<<endl;
+		g<<a[index].manv<<"\t"<<a[index].holot<<"\t\t"<<a[index].ten<<"\t\t"<<a[index].tienluong<<endl;
 	}
+	else
+		cout<<"Khong co ma nhan vien nay!"<<endl;
 }
 void maxmin(nhanvien a[],int n)
 {
@@ -125,15 +125,16 @@ void menu(nhanvien a[],int n)
 	if(k!=NULL)
 	{
 		cout<<"Du lieu trong file input3.txt"<<endl;
-		k>>n;
+		char s[30];
+		k.getline(s,30);	n=atoi(s);
+		cout<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho lot nhan vien"<<"\t|"<<"Ten"<<"\t|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 		for(int i=0;i<n;i++)
 		{
-			k>>a[i].manv;
-			k>>a[i].holot;
-			k>>a[i].ten;
-			k>>a[i].tienluong;
-			cout<<"STT"<<"\t"<<"MaNV"<<"\t"<<"Ho lot"<<"\t\t"<<"Ten"<<"\t\t"<<"Tien Luong"<<endl;
-			cout<<" "<<i+1<<"\t"<<" "<<a[i].manv<<"\t"<<" "<<a[i].holot<<"\t"<<" "<<a[i].ten<<"\t"<<" "<<a[i].tienluong<<endl;
+			k.getline(s,30);	a[i].manv=atoi(s);
+			k.getline(s,30);	strcpy(a[i].holot,s);
+			k.getline(s,30);	strcpy(a[i].ten,s);
+			k.getline(s,30);	a[i].tienluong=atoi(s);
+			cout<<i+1<<"\t"<<a[i].manv<<"\t"<<" "<<a[i].holot<<"\t\t"<<a[i].ten<<"\t"<<a[i].tienluong<<endl;
 		}
 		do
 		{
@@ -254,6 +255,5 @@ int main()
 	int n;
 	nhanvien a[50];
 	menu(a,n);
-	getch();
 	return 0;
 }
