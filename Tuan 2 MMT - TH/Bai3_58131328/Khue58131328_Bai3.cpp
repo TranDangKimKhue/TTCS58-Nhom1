@@ -18,7 +18,7 @@ void traLoi(char *file,boDe a[],int n);
 void xemDiem(nguoiChoi a[]);
 void menu();
 nguoiChoi b[50];
-int soLan=1;
+int soLan=1,kt=0;
 void khoitao(nguoiChoi b[50])
 {
 	b[soLan].diem=0;
@@ -61,14 +61,17 @@ void traLoi(char *file,boDe a[],int n)
 	system("cls");
 	ifstream f;
 	string s;
+	char choise[2],choise1[2];
 	khoitao(b);
 	fflush(stdin);
-	cout<<"Ten nguoi choi :>";	getline(cin,b[soLan].ten);
+	if(kt!=1)
+	{
+		cout<<"Ten nguoi choi :>";	getline(cin,b[soLan].ten);
+	}
 	f.open(file);
 	getline(f,s);	n=atoi(s.c_str());
 	cout<<"Bo de gom "<<n<<" cau"<<endl;
 	int i=0,chon;
-	char choise[2],choise1[2];
 	while(i<n)
 	{
 		getline(f,s);	a[i].cauHoi=s;
@@ -157,14 +160,23 @@ void traLoi(char *file,boDe a[],int n)
 	fflush(stdin);
 	do
 	{
-		cout<<"Ban co muon choi lai khong? <y/n>"<<endl;	cin.getline(choise1,2);
-		if(strcmp(choise1,"y")==0)
+		cout<<"Ban co muon choi lai, choi tiep hay thoat? <t/y/n>"<<"\nt: tiep tuc\ny: choi lai\nn: thoat"<<endl;	cin.getline(choise1,2);
+		if(strcmp(choise1,"t")==0)
+		{
+			kt=0;
 			menu();
+		}
+		else if(strcmp(choise1,"y")==0)
+		{
+			soLan--;
+			kt=1;
+			traLoi(file,a,n);
+		}
 		else if(strcmp(choise1,"n")==0)
 			cout<<"Ket thuc"<<endl;
 		else
-			cout<<"Xin cho y/n"<<endl;
-	}while(strcmp(choise1,"y")!=0&&strcmp(choise1,"n")!=0);
+			cout<<"Xin cho t/y/n"<<endl;
+	}while(strcmp(choise1,"y")!=0&&strcmp(choise1,"n")!=0&&strcmp(choise1,"t")!=0);
 	f.close();
 }
 void xemDiem(nguoiChoi a[])
