@@ -35,7 +35,7 @@ void inDanhSachNv(nhanVien a[],int n)
 	cout<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 	for(int i=0;i<n;i++)
 	{
-		cout<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
+		cout<<" "<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
 	}
 	cout<<endl;
 }
@@ -67,7 +67,7 @@ void themNv(nhanVien a[],int &n)
 			k<<"---------------------------------------------"<<endl;
 			k<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 			for(int j=0;j<n;j++)
-				k<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
+				k<<" "<<j+1<<"\t"<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
 			inDanhSachNv(a,n);
 		}
 	}
@@ -95,7 +95,7 @@ void xoaNv(nhanVien a[],int &n)
 		k<<"---------------------------------------------"<<endl;
 		k<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 		for(int j=0;j<n;j++)
-			k<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
+			k<<" "<<j+1<<"\t"<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
 		inDanhSachNv(a,n);
 	}
 	else
@@ -122,7 +122,7 @@ void capNhatNv(nhanVien a[],int n)
 		k<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 		k<<"Danh sach sau khi cap nhat : "<<endl;
 		for(int j=0;j<n;j++)
-			k<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
+			k<<" "<<j+1<<"\t"<<a[j].maNv<<"\t"<<" "<<a[j].hoTen<<"\t\t    "<<a[j].tuoi<<"\t"<<a[j].luongCb<<endl;
 		inDanhSachNv(a,n);
 	}
 	else
@@ -140,11 +140,11 @@ void timKiemNv(nhanVien a[],int n)
 	}
 	if(a[index].maNv==x)
 	{
-		cout<<a[index].maNv<<"\t"<<a[index].hoTen<<"\t"<<a[index].tuoi<<"\t"<<a[index].luongCb<<endl;
+		cout<<" "<<a[index].maNv<<"\t"<<a[index].hoTen<<"\t"<<a[index].tuoi<<"\t"<<a[index].luongCb<<endl;
 		k<<"---------------------------------------------"<<endl;
 		k<<"STT"<<"|"<<"Ma nhan vien"<<"|"<<"Ho ten nhan vien"<<"|"<<"Tuoi"<<"|"<<"Luong"<<endl;
 		k<<"Ket qua sau khi tim kiem : "<<endl;
-		k<<a[index].maNv<<"\t"<<a[index].hoTen<<"\t"<<a[index].tuoi<<"\t"<<a[index].luongCb<<endl;
+		k<<"Vi tri : "<<index<<a[index].maNv<<"\t"<<a[index].hoTen<<"\t"<<a[index].tuoi<<"\t"<<a[index].luongCb<<endl;
 	}
 	else
 		cout<<"Ma nhan vien khong ton tai!"<<endl;
@@ -194,58 +194,49 @@ int main()
 			g.getline(s,30);	strcpy(a[i].hoTen,s);
 			g.getline(s,30);	a[i].tuoi=atoi(s);
 			g.getline(s,30);	a[i].luongCb=atoi(s);
-			cout<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t"<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
+			cout<<" "<<i+1<<"\t"<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t"<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
 		}
 		system("pause");
 		do
 		{
 			system("cls");
 			cout<<"--------Chuong trinh quan ly nhan vien---------"<<endl;
-			cout<<"1.Tao lai danh sach nhan vien"<<endl;
-			cout<<"2.Them mot nhan vien"<<endl;
-			cout<<"3.Sua doi thong tin nhan vien theo ma nhan vien"<<endl;
-			cout<<"4.Xoa mot nhan vien theo ma nhan vien"<<endl;
-			cout<<"5.Tim kiem nhan vien theo ma nhan vien"<<endl;
-			cout<<"6.In danh sach nhan vien"<<endl;
-			cout<<"7.Thoat"<<endl;
+			cout<<"1.Them mot nhan vien"<<endl;
+			cout<<"2.Sua doi thong tin nhan vien theo ma nhan vien"<<endl;
+			cout<<"3.Xoa mot nhan vien theo ma nhan vien"<<endl;
+			cout<<"4.Tim kiem nhan vien theo ma nhan vien"<<endl;
+			cout<<"5.In danh sach nhan vien"<<endl;
+			cout<<"6.Thoat"<<endl;
 			cout<<"-----------------------------------------------"<<endl;
-			cout<<"Chon menu (1->7)";
-			cin>>chon;
+			cout<<"Chon : ";	cin>>chon;
 			switch(chon)
 			{
 				case 1:
-					cout<<"So luong nhan vien : ";
-					cin>>n;
-					nhap(a,n);
-					ghifile("input2.txt",a,n);
-					system("pause");
-					break;
-				case 2:
 					themNv(a,n);
 					system("pause");
 					break;
-				case 3:
+				case 2:
 					capNhatNv(a,n);
 					system("pause");
 					break;
-				case 4:
+				case 3:
 					xoaNv(a,n);
 					system("pause");
 					break;
-				case 5:
+				case 4:
 					timKiemNv(a,n);
 					system("pause");
 					break;
-				case 6:
+				case 5:
 					inDanhSachNv(a,n);
 					system("pause");
 					break;
-				case 7:
+				case 6:
 					break;
 				default:
 					cout<<"Muc lua chon khong ton tai!"<<endl;
 			}
-		}while(chon!=7);
+		}while(chon!=6);
 	}
 	else
 	{
@@ -253,7 +244,7 @@ int main()
 		{
 			system("cls");
 			cout<<"--------Chuong trinh quan ly nhan vien---------"<<endl;
-			cout<<"1.Tao lai danh sach nhan vien"<<endl;
+			cout<<"1.Nhap danh sach nhan vien"<<endl;
 			cout<<"2.Them mot nhan vien"<<endl;
 			cout<<"3.Sua doi thong tin nhan vien theo ma nhan vien"<<endl;
 			cout<<"4.Xoa mot nhan vien theo ma nhan vien"<<endl;
@@ -275,51 +266,42 @@ int main()
 					{
 						system("cls");
 						cout<<"--------Chuong trinh quan ly nhan vien---------"<<endl;
-						cout<<"1.Tao lai danh sach nhan vien"<<endl;
-						cout<<"2.Them mot nhan vien"<<endl;
-						cout<<"3.Sua doi thong tin nhan vien theo ma nhan vien"<<endl;
-						cout<<"4.Xoa mot nhan vien theo ma nhan vien"<<endl;
-						cout<<"5.Tim kiem nhan vien theo ma nhan vien"<<endl;
-						cout<<"6.In danh sach nhan vien"<<endl;
-						cout<<"7.Thoat"<<endl;
+						cout<<"1.Them mot nhan vien"<<endl;
+						cout<<"2.Sua doi thong tin nhan vien theo ma nhan vien"<<endl;
+						cout<<"3.Xoa mot nhan vien theo ma nhan vien"<<endl;
+						cout<<"4.Tim kiem nhan vien theo ma nhan vien"<<endl;
+						cout<<"5.In danh sach nhan vien"<<endl;
+						cout<<"6.Thoat"<<endl;
 						cout<<"-----------------------------------------------"<<endl;
-						cout<<"Chon menu (1->7)";
-						cin>>chon;
+						cout<<"Chon : ";	cin>>chon;
 						switch(chon)
 						{
 							case 1:
-								cout<<"So luong nhan vien : ";
-								cin>>n;
-								nhap(a,n);
-								ghifile("input2.txt",a,n);
-								system("pause");
-								break;
-							case 2:
 								themNv(a,n);
 								system("pause");
 								break;
-							case 3:
+							case 2:
 								capNhatNv(a,n);
 								system("pause");
 								break;
-							case 4:
+							case 3:
 								xoaNv(a,n);
 								system("pause");
 								break;
-							case 5:
+							case 4:
 								timKiemNv(a,n);
 								system("pause");
 								break;
-							case 6:
+							case 5:
 								inDanhSachNv(a,n);
 								system("pause");
 								break;
-							case 7:
+							case 6:
 								break;
 							default:
 								cout<<"Muc lua chon khong ton tai!"<<endl;
 						}
-					}while(chon!=7);
+					}while(chon!=6);
 					break;
 				case 7:
 					break;
