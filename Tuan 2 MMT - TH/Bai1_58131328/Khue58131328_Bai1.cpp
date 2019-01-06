@@ -57,16 +57,19 @@ int kiemTra(int a[3][3])
 	else
 		return -1;
 }
-void cachChoi(int player)
+void cachChoi(int XO)
 {
-	int nuocdi;
+	int nuocdi,player;
 	char xo;
 	do
 	{
 		system("cls");
 		hienThi(a,c);
-		player=(player%2?1:2);
-		xo=(player==1?'X':'O');
+		player=(player%2!=0?1:2);
+		if(XO==1)
+			xo=(player==1?'X':'O');
+		else if(XO==2)
+			xo=(player==1?'O':'X');
 		cout<<"\n\t\t\t\t\t";
 		cout<<"Player "<<player<<" turn :> ";	cin>>nuocdi;
 		if(nuocdi==1&&c[1]==' ')
