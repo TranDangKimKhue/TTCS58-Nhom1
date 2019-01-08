@@ -1,13 +1,9 @@
-3
+2
 5
-BoDe3.txt
-Le Chi Van
+BoDe1.txt
+A
 5
 5
 BoDe2.txt
-Tran Ngoc Tien
-5
-5
-BoDe1.txt
-Nguyen Huu Luan
-5
+Linh
+2
