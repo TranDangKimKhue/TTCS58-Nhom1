@@ -1,8 +1,8 @@
 #include<iostream>
-using namespace std;
 #include<fstream>
 #include<stdlib.h>
 #include<string.h>
+using namespace std;
 struct boDe
 {
 	string cauHoi,a,b,c,d,dapAn;
@@ -61,7 +61,6 @@ void traLoi(char *file,boDe a[],int n)
 	system("cls");
 	ifstream f;
 	string s;
-	char choise[2],choise1[2];
 	khoitao(b);
 	fflush(stdin);
 	if(kt!=1)
@@ -72,6 +71,7 @@ void traLoi(char *file,boDe a[],int n)
 	getline(f,s);	n=atoi(s.c_str());
 	cout<<"Bo de gom "<<n<<" cau"<<endl;
 	int i=0,chon;
+	char choise[2],choise1[2];
 	while(i<n)
 	{
 		getline(f,s);	a[i].cauHoi=s;
@@ -158,9 +158,11 @@ void traLoi(char *file,boDe a[],int n)
 	k.close();
 	soLan++;
 	fflush(stdin);
+	cout<<"Ban co muon choi lai hay tiep tuc khong? <t/y/n>"<<endl;
+	cout<<"t<Tiep tuc>\ny<Choi lai>\nn<Thoat>\n";
 	do
 	{
-		cout<<"Ban co muon choi lai, choi tiep hay thoat? <t/y/n>"<<"\nt: tiep tuc\ny: choi lai\nn: thoat"<<endl;	cin.getline(choise1,2);
+		cin.getline(choise1,2);
 		if(strcmp(choise1,"t")==0)
 		{
 			kt=0;
