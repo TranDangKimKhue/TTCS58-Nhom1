@@ -206,11 +206,13 @@ int main()
 			cout<<"3.Xoa mot nhan vien theo ma nhan vien"<<endl;
 			cout<<"4.Tim kiem nhan vien theo ma nhan vien"<<endl;
 			cout<<"5.In danh sach nhan vien"<<endl;
-			cout<<"6.Thoat"<<endl;
+			cout<<"0.Thoat"<<endl;
 			cout<<"-----------------------------------------------"<<endl;
-			cout<<"Chon : ";	cin>>chon;
+			cout<<"Chon :>";	cin>>chon;
 			switch(chon)
 			{
+				case 0:
+					break;
 				case 1:
 					themNv(a,n);
 					system("pause");
@@ -231,12 +233,10 @@ int main()
 					inDanhSachNv(a,n);
 					system("pause");
 					break;
-				case 6:
-					break;
 				default:
 					cout<<"Muc lua chon khong ton tai!"<<endl;
 			}
-		}while(chon!=6);
+		}while(chon!=0);
 	}
 	else
 	{
@@ -250,12 +250,14 @@ int main()
 			cout<<"4.Xoa mot nhan vien theo ma nhan vien"<<endl;
 			cout<<"5.Tim kiem nhan vien theo ma nhan vien"<<endl;
 			cout<<"6.In danh sach nhan vien"<<endl;
-			cout<<"7.Thoat"<<endl;
+			cout<<"0.Thoat"<<endl;
 			cout<<"-----------------------------------------------"<<endl;
-			cout<<"Chon menu (1->7)";
+			cout<<"Chon menu :>";
 			cin>>chon;
 			switch(chon)
 			{
+				case 0:
+					break;
 				case 1:
 					cout<<"So luong nhan vien : ";
 					cin>>n;
@@ -271,11 +273,13 @@ int main()
 						cout<<"3.Xoa mot nhan vien theo ma nhan vien"<<endl;
 						cout<<"4.Tim kiem nhan vien theo ma nhan vien"<<endl;
 						cout<<"5.In danh sach nhan vien"<<endl;
-						cout<<"6.Thoat"<<endl;
+						cout<<"0.Thoat"<<endl;
 						cout<<"-----------------------------------------------"<<endl;
-						cout<<"Chon : ";	cin>>chon;
+						cout<<"Chon :>";	cin>>chon;
 						switch(chon)
 						{
+							case 0:
+								break;
 							case 1:
 								themNv(a,n);
 								system("pause");
@@ -296,20 +300,16 @@ int main()
 								inDanhSachNv(a,n);
 								system("pause");
 								break;
-							case 6:
-								break;
 							default:
 								cout<<"Muc lua chon khong ton tai!"<<endl;
 						}
-					}while(chon!=6);
-					break;
-				case 7:
+					}while(chon!=0);
 					break;
 				default:
 					cout<<"Du lieu khong ton tai!"<<endl;
 					system("pause");
 			}
-		}while(chon!=7);
+		}while(chon!=0&&chon!=1);
 	}
 	g.close();
 	return 0;
