@@ -13,10 +13,11 @@ void nhap(nhanVien a[],int &n);
 void inDanhSachNv(nhanVien a[],int n);
 void sapXep(nhanVien a[],int n);
 void timKiem(nhanVien a[],int n);
+int tkVitri(nhanVien a[],int n,int x);
 void themNv(nhanVien a[],int &n);
 void xoaNv(nhanVien a[],int &n);
 void capNhatNv(nhanVien a[],int n);
-void ghifile(char *file,nhanVien a[],int n);
+void ghiFile(char *file,nhanVien a[],int n);
 void nhap(nhanVien a[],int &n)
 {
 	for(int i=0;i<n;i++)
@@ -60,7 +61,7 @@ void timKiem(nhanVien a[],int n)
 	cout<<"Vi tri cua nhan vien : "<<index+1<<endl;
 	cout<<a[index].maNv<<" "<<a[index].hoTen<<" "<<a[index].soNgayCong<<" "<<a[index].luong<<endl;
 }
-int tk(nhanVien a[],int n,int x)
+int tkVitri(nhanVien a[],int n,int x)
 {
 	for(int i=0;i<n;i++)
 		if(a[i].maNv==x)
@@ -71,7 +72,7 @@ void themNv(nhanVien a[],int &n)
 {
 	int h,index;
 	cout<<"Ma nhan vien : ";	cin>>h;
-	if(tk(a,n,h)!=-1)
+	if(tkVitri(a,n,h)!=-1)
 		cout<<"Ma nhan vien da ton tai!"<<endl;
 	else
 	{
@@ -117,8 +118,8 @@ void capNhatNv(nhanVien a[],int n)
 {
 	int x,index;
 	cout<<"Ma nhan vien can sua : ";	cin>>x;
-	int h=tk(a,n,x);
-	if(tk(a,n,x)!=-1)
+	int h=tkVitri(a,n,x);
+	if(tkVitri(a,n,x)!=-1)
 	{
 		cout<<"Ma nhan vien moi : ";	cin>>a[h].maNv;
 		fflush(stdin);
@@ -154,7 +155,7 @@ void ghiFile(char *file,nhanVien a[],int n)
 //	g=fopen(file,"rb");
 //	fread(&a,sizeof(nhanVien),1,g);
 //	for(int i=0;i<n;i++)
-//		cout<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].tuoi<<"\t"<<a[i].luongCb<<endl;
+//		cout<<a[i].maNv<<"\t"<<" "<<a[i].hoTen<<"\t\t    "<<a[i].soNgayCong<<"\t"<<a[i].luong<<endl;
 //	fclose(g);
 //}
 void menu()
