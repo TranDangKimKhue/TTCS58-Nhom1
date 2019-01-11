@@ -23,7 +23,7 @@ void LRS(string s)
 	for(int j=0;j<=n;j++)
 		cout<<s[j]<<endl;
 	cout<<endl;
-	
+	//Gan trong so va luu vet vao mang
     for(int i=1;i<=n;i++)
     {
         for(int j=1;j<=n;j++)
@@ -51,7 +51,7 @@ void LRS(string s)
 			cout<<" "<<LV[i][j];
 		cout<<endl;
 	}
-
+	//tim max tren duong cheo phu tai vi tri cua mang LV[i][j]!=0
 	cout<<"Chuoi tim duoc la : ";
 	for(int k=1;k<=n;k++)
 	{
